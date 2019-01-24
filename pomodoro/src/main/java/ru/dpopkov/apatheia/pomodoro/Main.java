@@ -1,4 +1,4 @@
-package org.example.apatheia.pomodoro;
+package ru.dpopkov.apatheia.pomodoro;
 
 import javafx.application.Application;
 import javafx.scene.Scene;
