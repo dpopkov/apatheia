@@ -1,5 +1,6 @@
 CREATE TABLE questions
 (
     id      serial PRIMARY KEY,
-    wording text NOT NULL
+    wording text NOT NULL,
+    category text
 );

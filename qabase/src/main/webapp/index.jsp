@@ -1,17 +1,14 @@
-<%--
-  Created by IntelliJ IDEA.
-  User: denjd
-  Date: 09.11.2020
-  Time: 3:17
-  To change this template use File | Settings | File Templates.
---%>
 <%@ page contentType="text/html;charset=UTF-8" %>
 <!DOCTYPE html>
 <html>
 <head>
-    <title>Title</title>
+    <title>Index</title>
 </head>
 <body>
+
+<h1>Index</h1>
+
+<p><a href="TestDbServlet">TestDbServlet</a> </p>
 
 </body>
 </html>

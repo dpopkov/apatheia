@@ -8,6 +8,7 @@ import javax.servlet.http.HttpServletResponse;
 import java.io.IOException;
 import java.io.PrintWriter;
 import java.sql.*;
+import java.util.Properties;
 
 @WebServlet("/TestDbServlet")
 public class TestDbServlet extends HttpServlet {
@@ -23,9 +24,9 @@ public class TestDbServlet extends HttpServlet {
             throw new ServletException(e);
         }
         String jdbcUrl = "jdbc:postgresql://localhost:5432/qabase";
-        String user = "postgres";
-        String pass = "";
-        try (Connection connection = DriverManager.getConnection(jdbcUrl, user, pass)) {
+        Properties info = new Properties();
+        info.load(TestDbServlet.class.getResourceAsStream("/db.properties"));
+        try (Connection connection = DriverManager.getConnection(jdbcUrl, info)) {
             writer.append("Connection: ").append(connection.toString()).append("\n");
             Statement stmt = connection.createStatement();
             ResultSet rs = stmt.executeQuery("SELECT count(*) from questions");
