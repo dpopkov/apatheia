@@ -10,5 +10,7 @@
 
 <p><a href="TestDbServlet">TestDbServlet</a> </p>
 
+<p><a href="question/list">List Questions</a> </p>
+
 </body>
 </html>
